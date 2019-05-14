@@ -1,0 +1,26 @@
+{
+  "name": "react-repeat",
+  "version": "1.0.0",
+  "description": "Yet another react project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xnagpa/react-repeat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xnagpa/react-repeat/issues"
+  },
+  "homepage": "https://github.com/xnagpa/react-repeat#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}

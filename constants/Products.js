@@ -1,28 +1,25 @@
 
-export const products = [{
+import cyberpunk from '~/images/cyberpunk.jpg';
+import detroit from '~/images/detroit.jpg';
+import robot from '~/images/robot.jpg';
+
+export const Products = [{
   id: 1,
-  title: 'Первый продукт',
+  text: 'Киберпанк',
   price: 1200,
-  imageUrl: '123'
+  src: cyberpunk,
+  width: 300
 },{
   id: 1,
-  title: 'Первый продукт',
+  text: 'Детроит',
   price: 1200,
-  imageUrl: '123'
+  src: detroit,
+  width: 300
 },{
   id: 1,
-  title: 'Первый продукт',
+  text: 'Робот',
   price: 1200,
-  imageUrl: '123'
-},{
-  id: 1,
-  title: 'Первый продукт',
-  price: 1200,
-  imageUrl: '123'
-},{
-  id: 1,
-  title: 'Первый продукт',
-  price: 1200,
-  imageUrl: '123'
-}, ];
+  src: robot,
+  width: 300
+}];
 

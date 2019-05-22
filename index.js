@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import CatalogPage from '~/components/CatalogPage';
+
 import Calculate from '~/src/calculate';
 const calc = new Calculate;
 
@@ -10,7 +12,11 @@ class App extends Component {
   }
 
   render() {
-    return(<div>{calc.plus(1,2)}</div>);
+    return(
+      <div>
+        <CatalogPage />
+      </div>
+    );
   }
 }
 

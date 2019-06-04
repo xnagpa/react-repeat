@@ -10,19 +10,19 @@ class CatalogPage extends Component {
       this.state = { count: 0 };
       this.increaseCounter = this.increaseCounter.bind(this);
     }
-
+    // Эдуард,
     // Мне пришлось вынести инкремент из Basket
-    // На мой взгляд инкремент корзины должен быть все же корзине
+    // На мой взгляд инкремент Basket должен быть все же в Basket
     // но я не знаю КАК это сделать
-    increaseCounter() {
-      console.log('clicked');
+    increaseCounter(e) {      
+      // говнокод. Есть способ достать ближайшего сиблинга по селектору без сторонних библиотек?
+      const input = e.target.nextElementSibling.nextElementSibling;
       this.setState((prevState) => {
-        return { count: prevState.count + 1}
+        return { count: prevState.count + parseInt( input.value, 10)}
       });
     }
 
     render() {
-      console.log(Products);
       return(
         <div className='catalogPage'>
           <BasketContext.Provider value={{
@@ -33,7 +33,6 @@ class CatalogPage extends Component {
             <BasketContext.Consumer>
               { 
                 (data) => { 
-                  console.log(data);
                   return <Basket count={data.count}/>
                 } 
               }

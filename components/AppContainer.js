@@ -15,20 +15,22 @@ class AppContainer extends Component {
       this.addProductToBasket = this.addProductToBasket.bind(this);
     }
 
-    increaseTotalCount(value) {
+    increaseTotalCount(step) {
+      step = parseInt(step, 10);
       this.setState((prevState) => {
-        return Object.assign(prevState, { productsCount: prevState.productsCount + value});
+        return Object.assign(prevState, { productsCount: prevState.productsCount + step});
       });
     }
 
-    addProductToBasket(product, value) {
+    addProductToBasket(product, step) {
+      step = parseInt(step, 10);
       const basket = this.state.basket;
       const element = basket.find((el) => el.id === product.id);
       if(element) {
         const index = basket.indexOf(element);
-        basket[index].count = basket[index].count + value;
+        basket[index].count = basket[index].count + step;
       } else {
-        product.count = value;
+        product.count = step;
         basket.push(product)
       }
 

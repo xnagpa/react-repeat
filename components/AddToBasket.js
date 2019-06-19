@@ -5,13 +5,17 @@ class AddToBasket extends Component {
     constructor(props) {
       super(props);
       this.handleClick = this.handleClick.bind(this);
+      this.state = { step: 1 };
+      this.onChange = this.onChange.bind(this);
     }
 
-    handleClick(e, context) {
-      const input = e.target.nextElementSibling.nextElementSibling;
-      const value = parseInt( input.value, 10);
-      context.increaseTotalCount(value);
-      context.addProductToBasket(this.props.product, value);
+    handleClick(context, step) {
+      context.increaseTotalCount(step);
+      context.addProductToBasket(this.props.product, step);
+    }
+
+    onChange(e) {
+      this.setState({step: e.target.value});
     }
 
     render() {
@@ -20,9 +24,9 @@ class AddToBasket extends Component {
           {(context) => {
             return (
             <Fragment>
-              <button onClick={(e) => this.handleClick(e, context)} className='add-to-basket'>Добавить в корзину</button>
+              <button onClick={(e) => this.handleClick(context, this.state.step)} className='add-to-basket'>Добавить в корзину</button>
               <label>Count</label>
-              <input className='js-items-count' defaultValue='1'/>
+              <input className='js-items-count' onChange = { this.onChange } value = { this.state.step }/>
             </Fragment>
             )
           }}

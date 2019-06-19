@@ -6,10 +6,20 @@ class Basket extends Component {
     super(props);
   }
 
+  productsInBasket() {
+    let products = []
+    this.props.basket.forEach((product) => {
+      products.push(<p>{ product.text }, <span>{ product.count }</span></p>)
+    });
+
+    return products;
+  }
+
   render() {
     return(
       <div className='basket'>
-        <h4>Товаров в корзине {this.props.count}</h4>
+        <h4>Товаров в корзине { this.props.count }</h4>
+        { this.productsInBasket() }
       </div>
     );
   }

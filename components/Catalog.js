@@ -21,7 +21,8 @@ class Catalog extends Component {
           text={product.text}
           src={product.src}
           price={product.price}
-          width={product.width}/>);
+          width={product.width}
+          product={product}/>);
       })
       return products;
     }

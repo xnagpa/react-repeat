@@ -10,7 +10,7 @@ class ProductCard extends Component {
       super(props);
     }
     // Мне пришлось пробросить сюда контекст родительского компонента
-    // Это норм или говно? 
+    // Это норм или говно?
     // См 26 строчку.
     render() {
       return(
@@ -18,18 +18,7 @@ class ProductCard extends Component {
           <TextBox text={this.props.text}/>
           <Image src={this.props.src} width={this.props.width}/>
           <Price amount={this.props.price}/>
-          <BasketContext.Consumer>            
-              {(data) => {
-                const handler = data.increase.bind(data.context)
-                return (
-                  <Fragment>
-                    <AddToBasket handler={data.increase} />
-                    <label>Count</label>
-                    <input className='js-items-count' defaultValue='1'/>
-                  </Fragment>
-                )         
-              }}
-          </BasketContext.Consumer>
+          <AddToBasket product={this.props.product}/>
         </div>
       );
     }

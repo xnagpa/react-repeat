@@ -3,7 +3,7 @@ import Image from '~/components/Image';
 import TextBox from '~/components/TextBox';
 import Price from '~/components/Price';
 import AddToBasket from '~/components/AddToBasket';
-import BasketContext from '~/components/BasketContext';
+import { Link } from 'react-router-dom';
 
 class ProductCard extends Component {
     constructor(props) {
@@ -11,10 +11,10 @@ class ProductCard extends Component {
     }
 
     render() {
-      const { text, src, price, width } = this.props.product;
+      const { text, src, price, width, id } = this.props.product;
       return(
         <div className='product-card'>
-          <TextBox text={text}/>
+          <Link to={`/item/${id}`}>{text}</Link>
           <Image src={src} width={width}/>
           <Price amount={price}/>
           <AddToBasket product={this.props.product}/>

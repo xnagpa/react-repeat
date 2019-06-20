@@ -49,7 +49,7 @@ class CartContainer extends Component {
             <AppContainer />
           </BasketContext.Provider>
         </div>
-          )
+      )
     }
   }
 

@@ -1,10 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 
-import AppContainer from '~/components/AppContainer';
-
-import Calculate from '~/src/calculate';
-const calc = new Calculate;
+import CartContainer from '~/components/CartContainer';
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +11,7 @@ class App extends Component {
   render() {
     return(
       <Fragment>
-        <AppContainer />
+        <CartContainer />
       </Fragment>
     );
   }

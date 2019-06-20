@@ -7,12 +7,7 @@ class Basket extends Component {
   }
 
   productsInBasket() {
-    let products = []
-    this.props.basket.forEach((product) => {
-      products.push(<p>{ product.text }, <span>{ product.count }</span></p>)
-    });
-
-    return products;
+    return this.props.basket.map(product => <p>{ product.text }, <span>{ product.count }</span></p>);
   }
 
   render() {

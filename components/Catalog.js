@@ -15,15 +15,7 @@ class Catalog extends Component {
     }
 
     populateCatalog() {
-      let products = []
-      this.props.products.forEach((product) => {
-        products.push(<ProductCard
-          text={product.text}
-          src={product.src}
-          price={product.price}
-          width={product.width}/>);
-      })
-      return products;
+      return this.props.products.map(product => <ProductCard product={product}/>);
     }
   }
 

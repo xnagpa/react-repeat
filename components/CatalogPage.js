@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
 import Catalog from '~/components/Catalog';
-import { Products } from '~/constants/Products';
 
 class CatalogPage extends Component {
-    constructor(props) {
-      super(props);
-    }
-
-    render() {
-      console.log(Products);
-      return(
-        <div className='catalogPage'>
-          <Catalog products={Products}/>
-        </div>
-      );
-    }
+  constructor(props) {
+    super(props);
   }
+
+  render() {
+    return(
+      <div className='catalogPage'>
+          <Catalog products={this.props.products}/>
+      </div>
+    );
+  }
+}
 
 export default CatalogPage;

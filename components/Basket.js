@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { throws } from 'assert';
 
 class Basket extends Component {
   constructor(props) {
@@ -11,7 +10,7 @@ class Basket extends Component {
   }
 
   render() {
-    return(
+    return (
       <div className='basket'>
         <h4>Товаров в корзине { this.props.count }</h4>
         { this.productsInBasket() }

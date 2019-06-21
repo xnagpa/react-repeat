@@ -46,7 +46,7 @@ class CartContainer extends Component {
               addProductToBasket: this.addProductToBasket,
               basket: this.state.basket
             }}>
-            <AppContainer />
+            {this.props.children}
           </BasketContext.Provider>
         </div>
       )

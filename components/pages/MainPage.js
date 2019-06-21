@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import CartContainer from '~/components/CartContainer';
+import AppContainer from '~/components/AppContainer';
 
 class MainPage extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class MainPage extends Component {
   render() {
     return(
       <Fragment>
-        <CartContainer />
+        <AppContainer />
       </Fragment>
     );
   }
